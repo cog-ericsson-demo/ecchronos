@@ -17,6 +17,12 @@
 # Description on all possible parameters can be found here:
 # https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#core-properties
 
+# REST API JSON Config
+# Keeps the Jackson 2 defaults for the REST API (for example, fields are written in declaration order)
+spring:
+  jackson:
+    use-jackson2-defaults: true
+
 # Actuator Config
 management:
   endpoints:
