@@ -2,14 +2,14 @@
 
 Wednesday 11 November, 13:00 London / 14:00 CET, 90 minutes. Everything below was prepared on 10 November on `cog-ericsson-demo/ecchronos` (branch `workshop/6.1.4`, release 6.1.4) and `cog-ericsson-demo/ecaudit` (`master`). Nothing has been merged.
 
-Status at 22:50 London on 10 November. Two items are still open and are marked **Not available yet** below: the Automation's critical-fix PR and the threat-model copy repositories.
+Status at 22:35 London on 10 November. Two items are still open and are marked **Not available yet** below: the Automation's critical-fix PR and the threat-model copy repositories.
 
 ## 1. Presenter actions
 
 | Deadline | Action |
 |---|---|
 | As early as possible | Approve the Automation update card in the preparation session (run as you instead of the org service user; one extra Docker download host). Until then the Automation starts sessions that cannot push to `cog-ericsson-demo/ecchronos`, so there is no critical-fix PR. After approval the preparation session re-fires the critical finding and updates this sheet. |
-| As early as possible | Create two empty repositories in `cog-ericsson-demo`: `ecaudit-workshop` and `ecaudit-workshop-2` (no README, no licence file), and make sure the Devin GitHub app covers both. They did not exist at the last check (10 Nov, 22:30). Then message the preparation session "repos are ready": it pushes a plain copy of ecaudit to both and rehearses the threat-model questions on the first. Without them, use the fallback in section 4 (Threat-model copy). |
+| As early as possible | Create two empty repositories in `cog-ericsson-demo`: `ecaudit-workshop` and `ecaudit-workshop-2` (no README, no licence file), and make sure the Devin GitHub app covers both. They did not exist at the last check (10 Nov, 22:35). Then message the preparation session "repos are ready": it pushes a plain copy of ecaudit to both and rehearses the threat-model questions on the first. Without them, use the fallback in section 4 (Threat-model copy). |
 | Before 12:30 | Archive the blocked Automation run from 10 November: [Fix CVE-2026-50010 in ecchronos](https://ericssondemo.devinenterprise.com/sessions/d5c99671073f41a8b10ef9d9d1ccd81b). It belongs to the org service user, so the preparation session is not allowed to archive it. It never opened a PR; do not open it on screen. |
 | 12:30 (T-30) | Open the tabs in section 2, in order. Check that each PR still shows "Open". |
 | 12:50 (T-10) | Only if `ecaudit-workshop-2` exists and holds the ecaudit copy: start a Devin Security scan on it and stop at the threat-model questions. Do not answer them before the call. Otherwise nothing to start. |
@@ -156,11 +156,11 @@ The batch added 301 unit tests across ten classes.
 - **Actuator is partly used.** `/actuator/health` responds, so do not use Actuator as the relabel example.
 - **Devin Security findings on ecchronos are all low.** The remediation demo therefore uses the ecaudit medium finding.
 - **The migration does not clear everything.** Spring Boot 4.0.8 manages Tomcat 11.0.24, which the advisories list as affected by four of the scanner-critical Tomcat CVEs (fixed in 11.0.25). All four are relabelled to low in the triage. Spring Boot 4.0.9 was 19 days old on 10 November and was held back on purpose, the same idea as a minimum release age in Renovate. The PR says so.
-- **ecaudit #7 went through three review rounds.** Present it as the review loop working, not as a fix that needed rework: automated review found gaps, the session confirmed each with a failing test and fixed it, and a person still decides on the merge. One integration test that checks log file size on disk failed once during those runs and passed on the rerun of the full suite. The PR was quiet at 22:45 on 10 November; read its last commit and comment at 12:30 in case a later review added something.
+- **ecaudit #7 went through three review rounds.** Present it as the review loop working, not as a fix that needed rework: automated review found gaps, the session confirmed each with a failing test and fixed it, and a person still decides on the merge. One integration test that checks log file size on disk failed once during those runs and passed on the rerun of the full suite. The session had finished at 22:35 on 10 November; read its last commit and comment at 12:30 in case a later review added something.
 - **Scan CSV import was not done.** See the optional presenter action. Nothing in the sheet depends on it.
 - **An older PR is open on ecchronos.** [#1](https://github.com/cog-ericsson-demo/ecchronos/pull/1) comes from earlier preparation and targets `demo-6.1.4`. It is not part of the workshop. Open ecchronos PRs by direct link, not through the PR list, or close #1 without merging beforehand.
 - **Environment.** Sessions started before 21:40 on 10 November reported "Environment build incomplete" for ecchronos and set up their own build. The environment was rebuilt successfully afterwards, so the live batch should not show that message. If it does, the sessions still work; they take longer to start.
-- **Earlier preparation sessions are in the session list.** Their titles mention demo preparation. Archive them before sharing the screen, or share only the tabs from section 2.
+- **Session list.** The earlier preparation sessions were archived on 10 November and no longer show in the list; they can be unarchived. Still listed: the workshop sessions from section 2, the preparation session ("Review Attachment and Suggest Improvements"), and the blocked Automation run until it is archived (section 1).
 
 ## 5. Clean-up after the call
 
