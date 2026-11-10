@@ -103,6 +103,9 @@ jobs:
       - name: Pin Docker API version for Testcontainers
         run: echo "api.version=1.44" > ~/.docker-java.properties
 
+      - name: Install libev headers for the Python Cassandra driver
+        run: sudo apt-get update && sudo apt-get install -y libev-dev
+
       - name: install dependencies
         run: mvn install -Pbuild-cassandra-test-jar -DskipTests=true
 

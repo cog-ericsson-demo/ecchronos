@@ -637,6 +637,7 @@ limitations under the License.
                             <exclude>**/*.rst</exclude>
                             <exclude>**/docker/*.properties</exclude>
                             <exclude>**/docker/*.yml</exclude>
+                            <exclude>workshop/**</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
