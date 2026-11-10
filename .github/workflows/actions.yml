@@ -100,6 +100,9 @@ jobs:
       - name: Run black in the check mode
         run: black --check --verbose --line-length 120 ./ecchronos-binary/src
 
+      - name: Pin Docker API version for Testcontainers
+        run: echo "api.version=1.44" > ~/.docker-java.properties
+
       - name: install dependencies
         run: mvn install -Pbuild-cassandra-test-jar -DskipTests=true
 
