@@ -1,5 +1,9 @@
 # Changes
 
+## Version 6.1.5
+
+* Override Tomcat embed to 10.1.61 to fix CVE-2026-65905
+
 ## Version 6.1.4
 
 * Add JSON output format to remaining subcommands - Issue #819
