@@ -146,7 +146,7 @@ Coverage is JaCoCo on unit tests, as reported by each session. PRs worth opening
 | Password-masking fix (ecaudit #7) | 1 | about 8 minutes to the first fix; about 55 minutes including three review rounds | about 7 |
 | Spring Boot 4 migration (ecchronos #2) | 1 | about 38 minutes to the PR | about 17 |
 
-The batch added 301 unit tests across ten classes.
+The batch added 301 unit tests across ten classes. Measured on 11 November with all ten branches combined locally (not pushed), unit tests only: line coverage across all modules goes from 69.7% (1,748 of 2,507 lines) to 96.9% (2,430), branch coverage from 57.0% (437 of 767) to 94.1% (722), and unit tests from 476 to 777 with 0 failures. Code that only the integration tests exercise counts as uncovered in both figures.
 
 ## 4. Known issues and what to say
 
