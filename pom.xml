@@ -59,13 +59,13 @@
         <awaitility.version>4.3.0</awaitility.version>
         <caffeine.version>3.2.3</caffeine.version>
         <cassandra.driver.core.version>4.19.1</cassandra.driver.core.version>
-        <com.fasterxml.jackson.annotations.version>2.20</com.fasterxml.jackson.annotations.version>
-        <com.fasterxml.jackson.core.version>2.20.1</com.fasterxml.jackson.core.version>
+        <com.fasterxml.jackson.annotations.version>2.21</com.fasterxml.jackson.annotations.version>
+        <com.fasterxml.jackson.core.version>2.21.5</com.fasterxml.jackson.core.version>
         <com.typesafe.config.version>1.4.5</com.typesafe.config.version>
         <equalsverifier.version>4.2.3</equalsverifier.version>
         <guava.version>33.5.0-jre</guava.version>
         <io.dropwizard.metrics.version>4.2.37</io.dropwizard.metrics.version>
-        <io.micrometer.version>1.16.0</io.micrometer.version>
+        <io.micrometer.version>1.16.7</io.micrometer.version>
         <io.netty.version>4.1.128.Final</io.netty.version>
         <io.prometheus.simpleclient.version>0.16.0</io.prometheus.simpleclient.version>
         <io.prometheus.client-java.version>1.4.3</io.prometheus.client-java.version>
@@ -82,12 +82,12 @@
         <org.apache.commons.commons-compress.version>1.28.0</org.apache.commons.commons-compress.version>
         <org.apache.httpcomponents.client5.httpclient5.version>5.5.1</org.apache.httpcomponents.client5.httpclient5.version>
         <org.bouncycastle.bcpkix-jdk18on.version>1.82</org.bouncycastle.bcpkix-jdk18on.version>
-        <org.springdoc.openapi-starter-webmvc-ui.version>2.8.14</org.springdoc.openapi-starter-webmvc-ui.version>
-        <org.springframework.boot.spring-boot-starter-actuator.version>3.5.7</org.springframework.boot.spring-boot-starter-actuator.version>
-        <org.springframework.boot.spring-boot-starter-thymeleaf.version>3.5.7</org.springframework.boot.spring-boot-starter-thymeleaf.version>
-        <org.springframework.boot.spring-boot-starter-web.version>3.5.7</org.springframework.boot.spring-boot-starter-web.version>
-        <org.springframework.spring-boot-test.version>3.5.7</org.springframework.spring-boot-test.version>
-        <org.springframework.spring-test.version>6.2.12</org.springframework.spring-test.version>
+        <org.springdoc.openapi-starter-webmvc-ui.version>3.0.3</org.springdoc.openapi-starter-webmvc-ui.version>
+        <org.springframework.boot.spring-boot-starter-actuator.version>4.0.8</org.springframework.boot.spring-boot-starter-actuator.version>
+        <org.springframework.boot.spring-boot-starter-thymeleaf.version>4.0.8</org.springframework.boot.spring-boot-starter-thymeleaf.version>
+        <org.springframework.boot.spring-boot-starter-web.version>4.0.8</org.springframework.boot.spring-boot-starter-web.version>
+        <org.springframework.spring-boot-test.version>4.0.8</org.springframework.spring-boot-test.version>
+        <org.springframework.spring-test.version>7.0.9</org.springframework.spring-test.version>
         <org.yaml.snakeyaml.version>2.5</org.yaml.snakeyaml.version>
         <slf4j.version>2.0.17</slf4j.version>
         <swagger-annotations.version>2.2.40</swagger-annotations.version>
@@ -339,6 +339,19 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${org.springframework.boot.spring-boot-starter-web.version}</version>
+            </dependency>
+
+            <!-- Also pulled in by springdoc at an older patch level, keep them in sync with the starters -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-web-server</artifactId>
+                <version>${org.springframework.boot.spring-boot-starter-web.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-validation</artifactId>
                 <version>${org.springframework.boot.spring-boot-starter-web.version}</version>
             </dependency>
 
