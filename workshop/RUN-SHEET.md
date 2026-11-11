@@ -2,7 +2,7 @@
 
 Wednesday 11 November, 13:00 London / 14:00 CET, 90 minutes. Everything below was prepared on 10 and 11 November on `cog-ericsson-demo/ecchronos` (branch `workshop/6.1.4`, release 6.1.4) and `cog-ericsson-demo/ecaudit` (`master`). Nothing has been merged.
 
-Status at 12:55 London on 11 November. One thing is still not working and is marked as such below: the Automation opening a PR by itself (retested at 12:44, still HTTP 403 on git). Added since 12:25: the scan CSV import, the live scan on `ecaudit-workshop-2`, a chained-vulnerability example and a daily scan schedule.
+Status at 12:46 London on 11 November. One thing is still not working and is marked as such below: the Automation opening a PR by itself (retested at 12:44, still HTTP 403 on git). Added since 12:25: the scan CSV import, the live scan on `ecaudit-workshop-2`, a chained-vulnerability example and a daily scan schedule.
 
 ## 1. Presenter actions
 
